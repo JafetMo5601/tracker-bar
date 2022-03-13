@@ -32,10 +32,10 @@ class Home : AppCompatActivity() {
         sliderItems.add(SliderItem(R.drawable.sample_image4))
 
         val titlesList: MutableList<String> = ArrayList()
-        titlesList.add("Title 1")
-        titlesList.add("Title 2")
-        titlesList.add("Title 3")
-        titlesList.add("Title 4")
+        titlesList.add("BARES")
+        titlesList.add("RESERVATIONS")
+        titlesList.add("SETTINGS")
+        titlesList.add("PROFILE")
 
         viewPager2.adapter = SliderAdapter(
             sliderItems,
