@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FinalProject</string>
+    <string name="ok">Ok</string>
+    <string name="login_failed">Email or Password incorrect</string>
+    <string name="home_title">Hello I am home</string>
+    <string name="sample_text">Sample Text</string>
+    <string name="good_morning">Good Morning User</string>
 </resources>
