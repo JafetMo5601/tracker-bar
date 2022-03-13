@@ -5,4 +5,6 @@
     <string name="home_title">Hello I am home</string>
     <string name="sample_text">Sample Text</string>
     <string name="good_morning">Good Morning User</string>
+    <string name="good_afternoon">Good Afternoon User</string>
+    <string name="good_night">Good Night User</string>
 </resources>
