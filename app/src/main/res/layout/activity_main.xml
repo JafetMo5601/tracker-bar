@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"
-        android:fontFamily="@font/amiko"
+        android:fontFamily="@font/sen"
         android:text="Welcome"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00FFFFFF"
+            android:fontFamily="@font/sen"
             android:text="Sign Up"
             android:textColor="#5D5D5D" />
 
@@ -41,8 +42,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00FFFFFF"
+            android:fontFamily="@font/sen"
             android:text="Sign In"
-            android:textColor="#5D5D5D" />
+            android:textColor="#2EC4B6" />
     </LinearLayout>
 
     <TextView
@@ -50,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/amiko"
+        android:fontFamily="@font/sen"
         android:text="Email"
         android:textColor="#5D5D5D"
         android:textSize="16sp" />
@@ -70,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:fontFamily="@font/amiko"
+        android:fontFamily="@font/sen"
         android:text="Password"
         android:textColor="#5D5D5D"
         android:textSize="16sp" />
@@ -87,19 +89,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contextClickable="true"
+        android:fontFamily="@font/sen"
         android:text="Forgot Password?"
         android:textAlignment="textEnd"
         android:textColor="#5D5D5D"
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/bt_authenticate"
+        android:id="@+id/bt_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="#011627"
         android:backgroundTint="#011627"
+        android:fontFamily="@font/sen"
         android:text="Sign In"
         app:iconTint="#011627"
         app:rippleColor="#011627" />
@@ -109,6 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
+        android:fontFamily="@font/sen"
         android:text="Or sign in with:"
         android:textAlignment="center"
         android:textColor="#5D5D5D"
