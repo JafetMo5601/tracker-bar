@@ -8,7 +8,7 @@
     <string name="good_afternoon">Good Afternoon User</string>
     <string name="good_night">Good Night User</string>
     <string name="reservation_title">Hola</string>
-    <string name="bares_title">BARES</string>
-    <string name="settings_title">SETTINGS</string>
-    <string name="profile_title">PROFILE</string>
+    <string name="bares_title">Bares</string>
+    <string name="settings_title">Settings</string>
+    <string name="profile_title">Profile</string>
 </resources>

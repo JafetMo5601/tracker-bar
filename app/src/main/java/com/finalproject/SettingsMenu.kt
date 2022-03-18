@@ -3,19 +3,19 @@ package com.finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 
 class SettingsMenu : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_menu)
 
-        val array_adapter: ArrayAdapter<*>
-        val setting_options = mutableListOf(
+        val arrayAdapter: ArrayAdapter<*>
+        val settingOptions = arrayOf(
             "Profile", "Appearance", "Functions", "Notifications", "Contact", "Support", "Home")
-        val classe_options = mapOf(
+        val classOptions = mapOf(
             "Profile" to null,
             "Appearance" to null,
             "Functions" to null,
@@ -24,21 +24,39 @@ class SettingsMenu : AppCompatActivity() {
             "Support" to null,
             "Home" to Home::class.java
         )
-        val lv_menu = findViewById<ListView>(R.id.lv_settings)
 
-        array_adapter = ArrayAdapter(this, R.layout.list_black_text, android.R.layout.simple_list_item_1, setting_options)
-        lv_menu.adapter = array_adapter
+        val lvMenu = findViewById<ListView>(R.id.lv_settings)
+        val svMenu = findViewById<SearchView>(R.id.searchView)
 
-        lv_menu.setOnItemClickListener(){ parent,view,position,id ->
-            var option = parent.getItemAtPosition(position).toString()
+        arrayAdapter = ArrayAdapter(this, R.layout.setting_menu_item, R.id.tv, settingOptions)
+        lvMenu.adapter = arrayAdapter
 
-            if (classe_options[option] != null) {
-                val intent = Intent(this, classe_options[parent.getItemAtPosition(position).toString()])
+        svMenu.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                svMenu.clearFocus()
+                if (settingOptions.contains(query)) {
+                    arrayAdapter.filter.filter(query)
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(query: String?): Boolean {
+                arrayAdapter.filter.filter(query)
+                return false
+            }
+
+        })
+
+        lvMenu.setOnItemClickListener{ parent,view,position,id ->
+            val option = parent.getItemAtPosition(position).toString()
+
+            if (classOptions[option] != null) {
+                val intent = Intent(this, classOptions[parent.getItemAtPosition(position).toString()])
                 startActivity(intent)
             } else {
                 Toast.makeText(
                     this,
-                    "Does not exists an activity for ${option}",
+                    "Does not exists an activity for $option",
                     Toast.LENGTH_LONG).show()
             }
         }
