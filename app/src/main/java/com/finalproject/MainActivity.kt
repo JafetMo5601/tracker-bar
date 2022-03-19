@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun update(user: FirebaseUser?) {
         if (user != null) {
-            val intent = Intent(this, SettingsMenu::class.java)
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
     }

@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.finalproject.utilities.LayoutUtils
+import kotlin.reflect.typeOf
 
 class SettingsMenu : AppCompatActivity() {
 
@@ -11,19 +13,12 @@ class SettingsMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_menu)
+        val layoutUtilsInstance = LayoutUtils()
 
         val arrayAdapter: ArrayAdapter<*>
         val settingOptions = arrayOf(
             "Profile", "Appearance", "Functions", "Notifications", "Contact", "Support", "Home")
-        val classOptions = mapOf(
-            "Profile" to null,
-            "Appearance" to null,
-            "Functions" to null,
-            "Notifications" to null,
-            "Contact" to null,
-            "Support" to null,
-            "Home" to Home::class.java
-        )
+        val classOptions = layoutUtilsInstance.getSettingLayoutClasses()
 
         val lvMenu = findViewById<ListView>(R.id.lv_settings)
         val svMenu = findViewById<SearchView>(R.id.searchView)
