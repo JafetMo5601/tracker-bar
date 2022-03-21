@@ -48,7 +48,6 @@ class SliderAdapter internal constructor(
                 } else {
                     Toast.makeText(itemView.context, "You clicked on item #${position + 1}", Toast.LENGTH_SHORT).show()
                 }
-
             }
         }
 

@@ -18,9 +18,8 @@ class LayoutUtils {
             "Appearance" to null,
             "Functions" to null,
             "Notifications" to null,
-            "Contact" to null,
-            "Support" to null,
-            "Home" to Home::class.java
+            "Contact and support" to null,
+            "Sign out" to null
         )
         this.homeLayoutClasses = mapOf(
             1 to null,
