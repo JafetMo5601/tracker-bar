@@ -27,10 +27,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/searchvview_background"
-        android:backgroundTint="#FF0000"
+        android:backgroundTint="#C4C4C4"
         android:backgroundTintMode="src_over"
         android:iconifiedByDefault="false"
-        android:queryBackground="@android:color/transparent"
         android:queryHint="Search"
         android:visibility="visible"
         tools:visibility="visible" />
