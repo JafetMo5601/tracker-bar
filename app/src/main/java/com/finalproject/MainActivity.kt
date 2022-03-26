@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
 
-        binding.btAuthenticate.setOnClickListener {
+        binding.btLogin.setOnClickListener {
             login();
         }
     }
