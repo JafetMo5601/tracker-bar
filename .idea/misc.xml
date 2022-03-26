@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
         <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_reset_password.xml" value="0.2" />
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/slider_item_container.xml" value="0.2" />
       </map>
     </option>
   </component>

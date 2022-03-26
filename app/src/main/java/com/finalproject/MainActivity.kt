@@ -27,10 +27,23 @@ class MainActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
 
-        binding.btAuthenticate.setOnClickListener {
-            login();
-        }
+        binding.btLogin.setOnClickListener { login() }
+
+        binding.btSignup.setOnClickListener { singUpPage() }
+
+        binding.forgetPassword.setOnClickListener { forgetPassword() }
     }
+
+    private fun forgetPassword() {
+        val intent = Intent(this, ResetPassword::class.java)
+        startActivity(intent)
+    }
+
+    private fun singUpPage() {
+        val intent = Intent(this, Register::class.java)
+        startActivity(intent)
+    }
+
 
     private fun login() {
         val email = binding.tvEmail.text.toString()

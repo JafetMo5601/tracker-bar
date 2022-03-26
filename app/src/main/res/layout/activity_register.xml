@@ -90,7 +90,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <EditText
             android:id="@+id/tv_lastname"
@@ -101,7 +102,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000"/>
     </LinearLayout>
 
     <TextView
@@ -122,7 +124,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -140,7 +143,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView15"
@@ -158,19 +162,18 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"/>
 
     <Button
-        android:id="@+id/bt_register"
+        android:id="@+id/bt_authenticate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="#011627"
-        android:backgroundTint="#011627"
         android:fontFamily="@font/sen"
-        android:text="Register"
-        app:iconTint="#011627"
-        app:rippleColor="#011627" />
+        android:text="Button" />
+
 </LinearLayout>
 
