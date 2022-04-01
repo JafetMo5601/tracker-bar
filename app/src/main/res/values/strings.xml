@@ -20,4 +20,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="default_web_cliet_id"
+        translatable="false">664840468763-u5haobfdqleri1ss5fpsp855fh2nid1c.apps.googleusercontent.com</string>
 </resources>

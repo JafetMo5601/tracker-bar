@@ -17,6 +17,9 @@
             android:name=".SettingsMenu"
             android:exported="false" />
         <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
             android:name=".home_menu"
             android:exported="false" />
         <activity
