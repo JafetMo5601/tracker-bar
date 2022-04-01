@@ -1,8 +1,13 @@
 package com.finalproject
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.util.Patterns
+import android.widget.EditText
+import android.widget.Toast
 import com.finalproject.databinding.ActivityMainBinding
 import com.finalproject.databinding.ActivityResetPasswordBinding
 import com.google.firebase.FirebaseApp
@@ -31,7 +36,20 @@ class ResetPassword : AppCompatActivity() {
     }
 
     private fun resetPassword() {
+        if(binding.tvEmail.text.toString().isEmpty()){
+            return
+        }
 
+        if (!Patterns.EMAIL_ADDRESS.matcher(binding.tvEmail.text.toString()).matches()){
+            return
+        }
+
+        Firebase.auth.sendPasswordResetEmail(binding.tvEmail.text.toString())
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Email send succesfully", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     private fun signInPage() {

@@ -25,7 +25,7 @@ class Register : AppCompatActivity() {
         auth = Firebase.auth
 
 
-        binding.btAuthenticate.setOnClickListener { register() }
+        binding.btRegister.setOnClickListener { register() }
 
         binding.btSignin.setOnClickListener { signInPage() }
     }
