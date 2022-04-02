@@ -1,16 +1,14 @@
 package com.finalproject.ui.slider
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.finalproject.Home
 import com.finalproject.R
 import com.finalproject.utilities.LayoutUtils
 import com.makeramen.roundedimageview.RoundedImageView
@@ -40,13 +38,13 @@ class SliderAdapter internal constructor(
             val homeLayoutOptions = layoutUtils.getHomeLayoutClasses()
             imageView.setOnClickListener{
                     v: View ->
-                val position = adapterPosition
+                val position = (adapterPosition + 1) % 4
 
-                if (homeLayoutOptions[position + 1] != null) {
-                    val intent = Intent(itemView.context, homeLayoutOptions[position + 1])
+                if (homeLayoutOptions[position] != null) {
+                    val intent = Intent(itemView.context, homeLayoutOptions[position])
                     itemView.context.startActivity(intent)
                 } else {
-                    Toast.makeText(itemView.context, "You clicked on item #${position + 1}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(itemView.context, "You clicked on item #${position}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
