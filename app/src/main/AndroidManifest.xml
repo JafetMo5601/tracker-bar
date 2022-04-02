@@ -9,27 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity
-            android:name=".IndexActivity"
-            android:exported="false"
-            android:label="@string/title_activity_index"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Index"
-            android:exported="false"
-            android:label="@string/title_activity_index"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Reservation"
-            android:exported="false" />
+
         <activity
             android:name=".SettingsMenu"
             android:exported="false" />
         <activity
             android:name=".ResetPassword"
-            android:exported="false" />
-        <activity
-            android:name=".home_menu"
             android:exported="false" />
         <activity
             android:name=".Home"
