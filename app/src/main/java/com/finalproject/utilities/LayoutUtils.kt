@@ -1,5 +1,6 @@
 package com.finalproject.utilities
 
+import com.finalproject.ReservationPage
 import com.finalproject.SettingsMenu
 
 class LayoutUtils {
@@ -17,7 +18,7 @@ class LayoutUtils {
         )
         this.homeLayoutClasses = mapOf(
             1 to null,
-            2 to null,
+            2 to ReservationPage::class.java,
             3 to SettingsMenu::class.java,
             0 to null
         )
