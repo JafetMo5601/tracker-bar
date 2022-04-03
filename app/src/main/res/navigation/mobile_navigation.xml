@@ -3,24 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/settingsMenu">
-
-    <activity android:id="@+id/home"
-        android:name="com.finalproject.Home"
-        android:label="@string/home"
-        tools:layout="@layout/activity_home">
-        <action
-            android:id="@+id/action_home_to_settingsMenu"
-            app:destination="@id/settingsMenu"/>
-    </activity>
-
-    <activity
-        android:id="@+id/settingsMenu"
-        android:name="com.finalproject.SettingsMenu"
-        android:label="activity_settings_menu"
-        tools:layout="@layout/activity_settings_menu">
-        <action
-            android:id="@+id/action_settingsMenu_to_home"
-            app:destination="@id/home"/>
-    </activity>
+    app:startDestination="@id/reservationFragment">
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="com.finalproject.ui.reservation.ReservationFragment"
+        android:label="fragment_reservation"
+        tools:layout="@layout/fragment_reservation" />
 </navigation>
