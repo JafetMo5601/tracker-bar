@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-
+        <activity
+            android:name=".EmptyReservation"
+            android:exported="false" />
+        <activity
+            android:name=".ReservationPage"
+            android:exported="false" />
         <activity
             android:name=".SettingsMenu"
             android:exported="false" />
