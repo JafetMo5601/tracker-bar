@@ -7,7 +7,7 @@
     <string name="good_morning">Good Morning User</string>
     <string name="good_afternoon">Good Afternoon User</string>
     <string name="good_night">Good Night User</string>
-    <string name="reservation_title">Hola</string>
+    <string name="reservation_title">Reservations</string>
     <string name="bares_title">Bares</string>
     <string name="settings_title">Settings</string>
     <string name="profile_title">Profile</string>
@@ -21,6 +21,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="home">Home</string>
-    <string name="default_web_cliet_id"
-        translatable="false">664840468763-u5haobfdqleri1ss5fpsp855fh2nid1c.apps.googleusercontent.com</string>
+    <string name="default_web_cliet_id" translatable="false">664840468763-u5haobfdqleri1ss5fpsp855fh2nid1c.apps.googleusercontent.com</string>
+    <string name="msg_reservation_advise">Reserve the place you want before you run out of your field!!!</string>
+    <string name="msg_no_reservation">Currently you have no reservations.</string>
+    <string name="current_reservation_title">Current Reservations</string>
 </resources>
