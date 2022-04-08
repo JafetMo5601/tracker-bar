@@ -2,13 +2,21 @@ package com.finalproject.animation
 
 import android.content.Context
 import android.graphics.Canvas
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.finalproject.R
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
+
 //import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 
 abstract class SwipeGesture(context: Context) : ItemTouchHelper.SimpleCallback(
     0, ItemTouchHelper.LEFT) {
+
+    val deleteColor = ContextCompat.getColor(context, R.color.deleteColor)
+    val deleteIcon = R.drawable.ic_delete
+
     override fun onMove(
         recyclerView: RecyclerView,
         viewHolder: RecyclerView.ViewHolder,
@@ -26,11 +34,11 @@ abstract class SwipeGesture(context: Context) : ItemTouchHelper.SimpleCallback(
         actionState: Int,
         isCurrentlyActive: Boolean,
     ) {
-//        RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-//            .addBackgroundColor(ContextCompat.getColor(this@MainActivity, R.color.my_background))
-//            .addActionIcon(R.drawable.my_icon)
-//            .create()
-//            .decorate()
+        RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+            .addSwipeLeftBackgroundColor(deleteColor)
+            .addSwipeLeftActionIcon(deleteIcon)
+            .create()
+            .decorate()
 
         super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
     }
