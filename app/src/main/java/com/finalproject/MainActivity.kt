@@ -39,17 +39,13 @@ class MainActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
 
-        binding.btLogin.setOnClickListener {
-            login();
-        }
+        binding.btLogin.setOnClickListener { login(); }
 
-        binding.forgetPassword.setOnClickListener {
-            resetPassword();
-        }
+        binding.forgetPassword.setOnClickListener { resetPassword(); }
 
-        binding.btSignup.setOnClickListener {
-            signUp();
-        }
+        binding.btSignup.setOnClickListener { signUp(); }
+
+        binding.ibFacebook.setOnClickListener { facebookAuth() }
 
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -58,6 +54,10 @@ class MainActivity : AppCompatActivity() {
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
         binding.ibGoogle.setOnClickListener { googleAuth(); }
+    }
+
+    private fun facebookAuth() {
+
     }
 
     private fun googleAuth() {
@@ -86,12 +86,12 @@ class MainActivity : AppCompatActivity() {
             try {
                 val account = task.getResult(ApiException::class.java)!!
                 firebaseAuthWithGoogle(account.idToken!!)
+                Toast.makeText(this, "Sign in succesfully", Toast.LENGTH_LONG).show()
             }catch (e: ApiException){
                 Log.w(TAG, "Google sign in failed")
             }
         }
     }
-
 
     private fun signUp() {
         val intent = Intent(this, Register::class.java)
@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun login() {
-        val email = binding.tvEmail.text.toString()
+        val email = binding.emailTv.text.toString()
         val password = binding.tvPassword.text.toString()
 
         auth.signInWithEmailAndPassword(email, password)
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     update(user)
                 } else {
-                    Toast.makeText(baseContext, "Failed", Toast.LENGTH_LONG).show()
+                    Toast.makeText(baseContext, "Failed, email or password invalid", Toast.LENGTH_LONG).show()
                      update(null)
                 }
             }

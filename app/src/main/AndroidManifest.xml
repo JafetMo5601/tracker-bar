@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
+            android:name=".CovidGuideLines"
+            android:exported="false" />
+        <activity
+            android:name=".ContactAndSupport"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
             android:name=".EmptyReservation"
             android:exported="false" />
         <activity

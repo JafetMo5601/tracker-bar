@@ -58,7 +58,7 @@
         android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/tv_email"
+        android:id="@+id/email_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
