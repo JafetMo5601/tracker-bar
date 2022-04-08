@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/reservation_item_view"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="80dp"
     android:layout_margin="10dp"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    app:cardCornerRadius="25dp"
-    app:cardElevation="30dp">
+    app:cardCornerRadius="15dp"
+    app:cardElevation="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp">
+        android:paddingTop="5dp">
 
         <TextView
             android:id="@+id/tv_reservation_bar_name"
@@ -32,7 +32,7 @@
             android:id="@+id/tv_reservation_detail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:text="@string/reservation_detail"
             android:textAlignment="center"
             android:textColor="#898A8D"
@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:text="@string/reservation_date"
             android:textAlignment="center"
+            android:textColor="#898A8D"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_reservation_detail" />
@@ -62,7 +63,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
-        android:layout_width="16dp"
+        android:layout_width="10dp"
         android:layout_height="match_parent"
         android:background="#011627"
         android:visibility="visible"

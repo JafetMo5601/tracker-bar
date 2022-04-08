@@ -1,11 +1,6 @@
 package com.finalproject.utilities
 
-import android.content.Context
-import android.content.Intent
-import android.widget.AdapterView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import com.finalproject.Home
+import com.finalproject.ReservationPage
 import com.finalproject.SettingsMenu
 import com.finalproject.ProfilePage
 
@@ -29,9 +24,9 @@ class LayoutUtils {
         )
         this.homeLayoutClasses = mapOf(
             1 to null,
-            2 to null,
+            2 to ReservationPage::class.java,
             3 to SettingsMenu::class.java,
-            4 to null
+            0 to null
         )
     }
 

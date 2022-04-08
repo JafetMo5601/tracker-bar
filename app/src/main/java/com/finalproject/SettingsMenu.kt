@@ -10,8 +10,6 @@ import com.google.firebase.ktx.Firebase
 import kotlin.reflect.typeOf
 
 class SettingsMenu : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_menu)

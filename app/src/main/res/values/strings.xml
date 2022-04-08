@@ -7,7 +7,7 @@
     <string name="good_morning">Good Morning User</string>
     <string name="good_afternoon">Good Afternoon User</string>
     <string name="good_night">Good Night User</string>
-    <string name="reservation_title">Hola</string>
+    <string name="reservation_title">Reservations</string>
     <string name="bares_title">Bares</string>
     <string name="settings_title">Settings</string>
     <string name="profile_title">Profile</string>
@@ -29,9 +29,6 @@
     <string name="contact_information">In case that you have some problem, concern or feedback about the application feel free to reach us by leaving us a message in the box below.</string>
     <string name="covid_information">According to Executive Decree No. 42603-S of September 07, 2020, the company shall must have a mask of mandatory use for all users who require access to its services within its access to its services within its facilities.</string>
     <string name="covid_information2">It must ensure that the protocols for hand washing, sneezing and coughing, other forms of greeting coughing and sneezing, other forms of greetings, not touching the face and the population at risk, physical distancing between people.</string>
-
-
-    <string name="default_web_cliet_id" translatable="false">664840468763-u5haobfdqleri1ss5fpsp855fh2nid1c.apps.googleusercontent.com</string>
     <string name="title_activity_covid_guidelines">CovidGuidelines</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -41,4 +38,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="home">Home</string>
+    <string name="default_web_cliet_id" translatable="false">664840468763-u5haobfdqleri1ss5fpsp855fh2nid1c.apps.googleusercontent.com</string>
+    <string name="msg_reservation_advise">Reserve the place you want before you run out of your field!!!</string>
+    <string name="msg_no_reservation">Currently you have no reservations.</string>
+    <string name="current_reservation_title">Current Reservations</string>
 </resources>

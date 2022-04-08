@@ -21,6 +21,11 @@ class ReservationAdapter: RecyclerView.Adapter<ReservationAdapter.ReservationVie
                 }
             }
 
+    fun deleteItem(i: Int) {
+        listReservations.drop(i)
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReservationViewHolder {
         val itemBinding = ReservationListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ReservationViewHolder(itemBinding)
