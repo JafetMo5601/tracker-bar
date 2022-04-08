@@ -37,7 +37,7 @@ class Register : AppCompatActivity() {
     }
 
     private fun register(){
-        val email = binding.tvEmail.text.toString()
+        val email = binding.emailTv.text.toString()
         val clave = binding.tvPassword.text.toString()
 
         auth.createUserWithEmailAndPassword(email, clave)
@@ -57,8 +57,13 @@ class Register : AppCompatActivity() {
 
     private fun update(user: FirebaseUser?) {
         if (user != null) {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
     }
+
+    /*private fun update() {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+    }*/
 }

@@ -3,20 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.22" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_reset_password.xml" value="0.2" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_settings_menu.xml" value="0.328125" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/setting_menu_item.xml" value="0.575" />
-        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/slider_item_container.xml" value="0.2" />
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_covid_guide_lines.xml" value="0.575" />
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.5661538461538461" />
+        <entry key="..\:/Documentos/Movil/FinalProject/app/src/main/res/layout/activity_reset_password.xml" value="0.5661538461538461" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

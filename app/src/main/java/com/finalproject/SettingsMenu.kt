@@ -44,10 +44,17 @@ class SettingsMenu : AppCompatActivity() {
         lvMenu.setOnItemClickListener{ parent,_,position,_ ->
             val option = parent.getItemAtPosition(position).toString()
 
+
             if (option == "Sign out") {
                 Firebase.auth.signOut()
                 finish()
                 val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else if(option == "Profile"){
+                val intent = Intent(this, ProfilePage::class.java)
+                startActivity(intent)
+            } else if(option == "Contact and support"){
+                val intent = Intent(this, ContactAndSupport::class.java)
                 startActivity(intent)
             } else {
                 if (classOptions[option] != null) {

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ContactAndSupport">
+
+    <TextView
+        android:id="@+id/tv_covid_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/sen"
+        android:text="@string/contactandsupport_title"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/infoCovid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/contact_information"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/setinfo"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_style"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="115dp"
+        android:backgroundTint="#2EC4B6"
+        android:fontFamily="@font/sen"
+        android:text="Send"
+        android:textAlignment="center" />
+
+</LinearLayout>
