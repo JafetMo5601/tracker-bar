@@ -6,8 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.finalproject.adapter.ReservationAdapter
+import com.finalproject.animation.SwipeGesture
 import com.finalproject.databinding.FragmentReservationBinding
 import com.finalproject.model.Reservation
 import com.finalproject.viewmodels.ReservationViewModel
@@ -27,16 +30,7 @@ class ReservationFragment : Fragment() {
 
         val reservationAdapter = ReservationAdapter()
         val recycler = binding.recycler
-//        val swipeGesture = object: SwipeGesture() {
-//            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-//                when(direction){
-//                    ItemTouchHelper.LEFT -> {
-//                        reservationAdapter.deleteItem(viewHolder.adapterPosition)
-//                    }
-//                }
-//                super.onSwiped(viewHolder, direction)
-//            }
-//        }
+
         recycler.adapter = reservationAdapter
         recycler.layoutManager = LinearLayoutManager(requireContext())
 
@@ -52,6 +46,20 @@ class ReservationFragment : Fragment() {
         reservationViewModel.getAllData.observe(viewLifecycleOwner) {
             reservations -> reservationAdapter.setData(tempListOfReservations)
         }
+
+        val swipeGesture = object: SwipeGesture(requireContext()) {
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                when(direction){
+                    ItemTouchHelper.LEFT -> {
+                        reservationAdapter.deleteItem(viewHolder.bindingAdapterPosition)
+//                        tempListOfReservations.removeAt(viewHolder.bindingAdapterPosition)
+                    }
+                }
+            }
+        }
+
+        val touchHelper = ItemTouchHelper(swipeGesture)
+        touchHelper.attachToRecyclerView(recycler)
 
         return binding.root
     }
