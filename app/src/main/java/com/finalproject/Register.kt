@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.finalproject.databinding.ActivityMainBinding
 import com.finalproject.databinding.ActivityRegisterBinding
 import com.google.firebase.FirebaseApp
@@ -44,6 +45,7 @@ class Register : AppCompatActivity() {
                 if(task.isSuccessful){
                     Log.d("Authenticating", "User registered")
                     val user = auth.currentUser
+                    Toast.makeText(this, "User registered succesfully", Toast.LENGTH_SHORT).show()
                     user?.sendEmailVerification()
                     update(user)
                 } else {
