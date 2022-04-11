@@ -1,21 +1,21 @@
 package com.finalproject.repository
 
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.finalproject.data.ReservationDAO
 import com.finalproject.model.Reservation
 
 class ReservationRepository(private val reservationDAO: ReservationDAO) {
-    val getAllData: LiveData<List<Reservation>> = reservationDAO.getAllData()
+    val getAllData: MutableLiveData<List<Reservation>> = reservationDAO.getAllData()
 
-    suspend fun addReservation(reservation: Reservation) {
-        reservationDAO.addReservation(reservation)
+    fun addReservation(reservation: Reservation) {
+        reservationDAO.saveReservation(reservation)
     }
 
-    suspend fun updateReservation(reservation: Reservation) {
-        reservationDAO.updateReservation(reservation)
+    fun updateReservation(reservation: Reservation) {
+        reservationDAO.saveReservation(reservation)
     }
 
-    suspend fun deleteReservation(reservation: Reservation) {
+    fun deleteReservation(reservation: Reservation) {
         reservationDAO.deleteReservation(reservation)
     }
 }
