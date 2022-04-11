@@ -1,26 +1,34 @@
 package com.finalproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.finalproject.ui.slider.SliderAdapter
 import com.finalproject.ui.slider.SliderItem
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.util.*
-import kotlin.collections.ArrayList
 
 class Home : AppCompatActivity() {
     private lateinit var viewPager2: ViewPager2
     private lateinit var titleTextView: TextView
     private val sliderHandler = Handler()
+    private var userName = " User"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val user = Firebase.auth.currentUser
+
+        if (user != null && user.displayName.toString().length > 1) {
+            userName = " ${user.displayName.toString()}"
+        }
 
         titleTextView = findViewById(R.id.tv_greetings)
         viewPager2 = findViewById(R.id.vp2_image_slider)
@@ -46,7 +54,7 @@ class Home : AppCompatActivity() {
         viewPager2.offscreenPageLimit = 3
         viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         val compositePageTransformer = CompositePageTransformer()
-        compositePageTransformer.addTransformer(MarginPageTransformer(30))
+        compositePageTransformer.addTransformer(MarginPageTransformer(10))
         compositePageTransformer.addTransformer {
                 page, position ->
             val r = 1 - kotlin.math.abs(position)
@@ -66,11 +74,11 @@ class Home : AppCompatActivity() {
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
 
         if (hour in 7..12) {
-            titleTextView.text = getString(R.string.good_morning)
+            titleTextView.text = getString(R.string.good_morning) + userName
         } else if (hour in 13..18) {
-            titleTextView.text = getString(R.string.good_afternoon)
+            titleTextView.text = getString(R.string.good_afternoon) + userName
         } else {
-            titleTextView.text = getString(R.string.good_night)
+            titleTextView.text = getString(R.string.good_night) + userName
         }
     }
 
