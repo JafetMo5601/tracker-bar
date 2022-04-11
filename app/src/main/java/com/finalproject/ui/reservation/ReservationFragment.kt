@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.finalproject.adapter.ReservationAdapter
 import com.finalproject.animation.SwipeGesture
 import com.finalproject.databinding.FragmentReservationBinding
-import com.finalproject.model.Reservation
 import com.finalproject.viewmodels.ReservationViewModel
 
 class ReservationFragment : Fragment() {
@@ -34,24 +33,23 @@ class ReservationFragment : Fragment() {
         recycler.adapter = reservationAdapter
         recycler.layoutManager = LinearLayoutManager(requireContext())
 
-        reservationViewModel = ViewModelProvider(this)[ReservationViewModel::class.java]
+//        barViewModel = ViewModelProvider(this)[BarViewModel::class.java]
 
-        var tempListOfReservations: MutableList<Reservation> = mutableListOf()
-        tempListOfReservations.add(Reservation(1, 1, "test1", "test detail", "12/12/12"))
-        tempListOfReservations.add(Reservation(2, 1, "test2", "test detail", "12/12/12"))
-        tempListOfReservations.add(Reservation(3, 1, "test3", "test detail", "12/12/12"))
-        tempListOfReservations.add(Reservation(4, 1, "test4", "test detail", "12/12/12"))
-        tempListOfReservations.add(Reservation(5, 1, "test5", "test detail", "12/12/12"))
+//        barViewModel.addReservation(Bar("", "Rooster", "San Antonio, Alajuela, Costa Rica", true, 50, 10))
+//        barViewModel.addReservation(Bar("", "Xcape Bar & Lounge", "Calle de la amargura, Saprissa, San Pedro", true, 50, 10))
+//        barViewModel.addReservation(Bar("", "Bar Terra U", "Calle 61 San Pedro, San Jose, Costa Rica", true, 50, 10))
+//        barViewModel.addReservation(Bar("", "OPEN MIND", "Contiguo a Monster Pizza, Calle de la Amargura", true, 50, 10))
+//        barViewModel.addReservation(Bar("", "Terra \"U\"", "Calle de la amargura, Saprissa, San Pedro", true, 50, 10))
+//        barViewModel.addReservation(Bar("", "Bar Einstein", "Saprissa, San Jose Province, Costa Rica", true, 50, 10))
 
         reservationViewModel.getAllData.observe(viewLifecycleOwner) {
-            reservations -> reservationAdapter.setData(tempListOfReservations)
+            reservations -> reservationAdapter.setData(reservations)
         }
 
         val swipeGesture = object: SwipeGesture(requireContext()) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 when(direction){
                     ItemTouchHelper.LEFT -> {
-                        reservationAdapter.deleteItem(viewHolder.bindingAdapterPosition)
 //                        tempListOfReservations.removeAt(viewHolder.bindingAdapterPosition)
                     }
                 }
