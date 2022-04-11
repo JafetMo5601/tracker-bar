@@ -2,33 +2,28 @@ package com.finalproject.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
-import com.finalproject.data.TrackerBarDB
+import androidx.lifecycle.MutableLiveData
+import com.finalproject.data.ReservationDAO
 import com.finalproject.model.Reservation
 import com.finalproject.repository.ReservationRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class ReservationViewModel(application: Application) : AndroidViewModel(application) {
-    val getAllData: LiveData<List<Reservation>>
-    private val repository: ReservationRepository
+    val getAllData: MutableLiveData<List<Reservation>>
+    private val repository = ReservationRepository(ReservationDAO())
 
     init {
-        val reservationDAO = TrackerBarDB.getDatabase(application).reservationDAO()
-        repository = ReservationRepository(reservationDAO)
         getAllData = repository.getAllData
     }
 
     fun addReservation(reservation: Reservation) {
-        viewModelScope.launch(Dispatchers.IO) { repository.addReservation(reservation) }
+        repository.addReservation(reservation)
     }
 
     fun updateReservation(reservation: Reservation) {
-        viewModelScope.launch(Dispatchers.IO) { repository.updateReservation(reservation) }
+        repository.updateReservation(reservation)
     }
 
     fun deleteReservation(reservation: Reservation) {
-        viewModelScope.launch(Dispatchers.IO) { repository.deleteReservation(reservation) }
+        repository.deleteReservation(reservation)
     }
 }
