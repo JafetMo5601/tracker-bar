@@ -1,14 +1,14 @@
 package com.finalproject.data
 
 import androidx.lifecycle.MutableLiveData
-import com.finalproject.model.Reservation
+import com.finalproject.model.Bar
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.firebase.ktx.Firebase
 
-class ReservationDAO {
+class BarDAO {
     private var userId: String
     private var firestore: FirebaseFirestore
 
@@ -19,57 +19,38 @@ class ReservationDAO {
         firestore.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
     }
 
-    fun getAllData(): MutableLiveData<List<Reservation>> {
-        val listReservation = MutableLiveData<List<Reservation>>()
+    fun getAllData(): MutableLiveData<List<Bar>> {
+        val listBar = MutableLiveData<List<Bar>>()
 
-        firestore.collection("reservationsApp")
-            .document(userId)
-            .collection("myReservations")
+        firestore.collection("bares")
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     return@addSnapshotListener
                 }
                 if (snapshot != null) {
-                    val list = ArrayList<Reservation>()
-                    val reservations = snapshot.documents
-                    reservations.forEach {
-                        val reservation = it.toObject(Reservation::class.java)
-                        if (reservation != null) {
-                            list.add(reservation)
+                    val list = ArrayList<Bar>()
+                    val bares = snapshot.documents
+                    bares.forEach {
+                        val bar = it.toObject(Bar::class.java)
+                        if (bar != null) {
+                            list.add(bar)
                         }
                     }
 
-                    listReservation.value = list
+                    listBar.value = list
                 }
             }
-        return listReservation
+        return listBar
     }
 
-    fun saveReservation(reservation: Reservation){
+    fun saveBar(bar: Bar){
         val document: DocumentReference
 
-        if(reservation.id.isEmpty()) {
-            document =  firestore.collection("reservationsApp")
-                .document(userId)
-                .collection("myReservations")
+        if(bar.id.isEmpty()) {
+            document =  firestore.collection("bares")
                 .document()
-            reservation.id = document.id
-        } else {
-            document = firestore.collection("reservationsApp")
-                .document(userId)
-                .collection("myReservations")
-                .document(reservation.id)
-        }
-        val set = document.set(reservation)
-    }
-
-    fun deleteReservation(reservation: Reservation) {
-        if (reservation.id.isNotEmpty()) {
-            firestore.collection("reservationsApp")
-                .document(userId)
-                .collection("myReservations")
-                .document(reservation.id)
-                .delete()
+            bar.id = document.id
+            val set = document.set(bar)
         }
     }
 }
