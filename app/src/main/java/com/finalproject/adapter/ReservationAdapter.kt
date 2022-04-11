@@ -15,16 +15,9 @@ class ReservationAdapter: RecyclerView.Adapter<ReservationAdapter.ReservationVie
                 fun bind(reservation: Reservation) {
                     itemBinding.tvReservationBarName.text = reservation.barName
                     itemBinding.tvReservationDetail.text = reservation.detail
-                    itemBinding.tvReservationDate.text = reservation.date.toString()
-
-//                    itemBinding.reservationItemView.setOnCliickListener {}
+                    itemBinding.tvReservationDate.text = reservation.date
                 }
             }
-
-    fun deleteItem(i: Int) {
-        listReservations.drop(i)
-        notifyDataSetChanged()
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReservationViewHolder {
         val itemBinding = ReservationListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
