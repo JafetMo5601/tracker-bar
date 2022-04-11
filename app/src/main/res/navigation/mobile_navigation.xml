@@ -9,4 +9,9 @@
         android:name="com.finalproject.ui.reservation.ReservationFragment"
         android:label="fragment_reservation"
         tools:layout="@layout/fragment_reservation" />
+    <fragment
+        android:id="@+id/barFragment"
+        android:name="com.finalproject.ui.bar.BarFragment"
+        android:label="fragment_bar"
+        tools:layout="@layout/fragment_bar" />
 </navigation>
