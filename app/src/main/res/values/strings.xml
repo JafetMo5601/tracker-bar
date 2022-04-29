@@ -51,12 +51,14 @@
     <string name="available_bares_title">Bar Availables</string>
     <string name="table_selection">Add Reservation</string>
     <string name="table_des">Please, fill out the fields to add your reservation</string>
-    <string name="table_select_tables">Reservation info</string>
+    <string name="table_select_tables">Reservation preferences</string>
     <string name="table_some_text">Available tables:</string>
     <string name="table_total">Total tables</string>
     <string name="table_some_text2">Quantity of tables to reserve:</string>
     <string name="table_total_tables">2</string>
     <string name="bt_request">Reserve</string>
+    <string name="bt_delete">Delete reservation</string>
+    <string name="bt_update">Edit reservation</string>
     <string name="msg_request">you can\'t reserve that number of tables</string>
     <string name="msg_barname">Bar name</string>
     <string name="msg_userid">User id</string>
@@ -64,4 +66,16 @@
     <string name="msg_date">Date</string>
     <string name="msg_reservation_added">Reservation added succesfully</string>
     <string name="msg_nofound_data">Some fields are no fill</string>
+
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <string name="menu_delete">Delete reservation</string>
+    <string name="msg_seguro_borrar">Are you sure to delete this reservation?</string>
+    <string name="tv_barname">Bar name</string>
+    <string name="tv_userid">User id</string>
+    <string name="tv_desc">Quantity of tables to reserve</string>
+    <string name="tv_date">Date</string>
+    <string name="msg_reservation_updated">Reservation edited succesfully</string>
+    <string name="msg_updatereservation_failed">Please fill in all fields</string>
+
 </resources>

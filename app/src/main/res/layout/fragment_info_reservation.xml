@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+
     android:orientation="vertical"
     tools:context=".CovidGuideLines">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,9 +22,9 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="50dp"
             android:fontFamily="@font/sen"
-            android:text="@string/table_des"
+            android:text="@string/table_select_tables"
             android:textAlignment="viewStart"
-            android:textColor="#FF9F1C"
+            android:textColor="#011627"
             android:textSize="20sp" />
 
 
@@ -40,7 +39,7 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_barname"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
+            android:textColor="#5D5D5D"
             android:textSize="18sp"/>
 
         <EditText
@@ -69,7 +68,7 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_userid"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
+            android:textColor="#5D5D5D"
             android:textSize="18sp"/>
 
         <EditText
@@ -98,7 +97,7 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_desc"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
+            android:textColor="#5D5D5D"
             android:textSize="18sp"/>
 
         <EditText
@@ -127,7 +126,7 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_date"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
+            android:textColor="#5D5D5D"
             android:textSize="18sp"/>
 
         <EditText
@@ -150,18 +149,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"/>
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
 
-    <Button
-        android:id="@+id/bt_request"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="115dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="115dp"
-        android:backgroundTint="#FF9F1C"
-        android:fontFamily="@font/sen"
-        android:text="@string/bt_request"
-        android:textAlignment="center" />
+        <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:backgroundTint="#E71D36"
+            android:fontFamily="@font/sen"
+            android:text="@string/bt_delete"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/bt_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:backgroundTint="#2EC4B6"
+            android:fontFamily="@font/sen"
+            android:text="@string/bt_update"
+            android:textAlignment="center" />
+
+    </LinearLayout>
 
 </LinearLayout>

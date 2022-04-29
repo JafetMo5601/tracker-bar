@@ -12,6 +12,12 @@
         <action
             android:id="@+id/action_reservationFragment_to_addReservationFragment"
             app:destination="@id/addReservationFragment" />
+        <argument
+            android:name="reservation"
+            app:argType="com.finalproject.model.Reservation" />
+        <action
+            android:id="@+id/action_reservationFragment_to_infoReservationFragment"
+            app:destination="@id/infoReservationFragment" />
     </fragment>
     <fragment
         android:id="@+id/barFragment"
@@ -28,6 +34,18 @@
             app:argType="com.finalproject.model.Bar" />
         <action
             android:id="@+id/action_addReservationFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoReservationFragment"
+        android:name="com.finalproject.InfoReservationFragment"
+        android:label="fragment_info_reservation"
+        tools:layout="@layout/fragment_info_reservation" >
+        <argument
+            android:name="reservation"
+            app:argType="com.finalproject.model.Reservation" />
+        <action
+            android:id="@+id/action_infoReservationFragment_to_reservationFragment"
             app:destination="@id/reservationFragment" />
     </fragment>
 </navigation>

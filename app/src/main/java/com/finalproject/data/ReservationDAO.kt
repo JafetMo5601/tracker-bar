@@ -78,6 +78,12 @@ class ReservationDAO {
                 .collection("myReservations")
                 .document(reservation.id)
                 .delete()
+                .addOnSuccessListener {
+                    Log.d("DeleteReservation", "Reservation deleted")
+                }
+                .addOnCanceledListener {
+                    Log.d("DeleteReservation", "Failed to delete reservation")
+                }
         }
     }
 }

@@ -2,9 +2,11 @@ package com.finalproject.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.finalproject.databinding.ReservationListItemBinding
 import com.finalproject.model.Reservation
+import com.finalproject.ui.reservation.ReservationFragmentDirections
 
 class ReservationAdapter: RecyclerView.Adapter<ReservationAdapter.ReservationViewHolder>() {
 
@@ -16,6 +18,12 @@ class ReservationAdapter: RecyclerView.Adapter<ReservationAdapter.ReservationVie
                     itemBinding.tvReservationBarName.text = reservation.barName
                     itemBinding.tvReservationDetail.text = reservation.detail
                     itemBinding.tvReservationDate.text = reservation.date
+
+
+                    itemBinding.reservationItemView.setOnClickListener {
+                        val action = ReservationFragmentDirections.actionReservationFragmentToInfoReservationFragment(reservation)
+                        itemView.findNavController().navigate(action)
+                    }
                 }
             }
 
