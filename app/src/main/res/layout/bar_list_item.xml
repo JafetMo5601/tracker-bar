@@ -32,12 +32,13 @@
             android:id="@+id/tv_reservation_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="@string/bar_open"
             android:textAlignment="center"
             android:textColor="#46B005"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="61dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv_address"
@@ -46,17 +47,18 @@
             android:text="@string/bar_direction"
             android:textColor="#898A8D"
             app:layout_constraintBottom_toTopOf="@+id/tv_reservation_date"
+            app:layout_constraintStart_toEndOf="@+id/tv_address_subtitle"
             app:layout_constraintTop_toBottomOf="@+id/tv_reservation_bar_name"
-            tools:layout_editor_absoluteX="61dp" />
+            app:layout_goneMarginLeft="50dp" />
 
         <TextView
             android:id="@+id/tv_address_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
             android:text="Address:"
             android:textColor="#898A8D"
             app:layout_constraintBottom_toTopOf="@+id/tv_reservation_date"
-            app:layout_constraintEnd_toStartOf="@+id/tv_address"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_reservation_bar_name" />
 

@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.finalproject.ui.slider.SliderAdapter
 import com.finalproject.ui.slider.SliderItem
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -17,6 +18,7 @@ import java.util.*
 class Home : AppCompatActivity() {
     private lateinit var viewPager2: ViewPager2
     private lateinit var titleTextView: TextView
+    private lateinit var fbAdd: FloatingActionButton
     private val sliderHandler = Handler()
     private var userName = " User"
 

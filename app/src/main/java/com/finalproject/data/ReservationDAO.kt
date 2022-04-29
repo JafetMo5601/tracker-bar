@@ -1,5 +1,6 @@
 package com.finalproject.data
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.finalproject.model.Reservation
 import com.google.firebase.auth.ktx.auth
@@ -61,7 +62,14 @@ class ReservationDAO {
                 .document(reservation.id)
         }
         val set = document.set(reservation)
+        set.addOnSuccessListener {
+            Log.d("AddReservation", "Reservation added")
+        }
+            .addOnCanceledListener {
+                Log.d("AddReservation", "Failed to add reservation")
+            }
     }
+
 
     fun deleteReservation(reservation: Reservation) {
         if (reservation.id.isNotEmpty()) {
@@ -70,6 +78,12 @@ class ReservationDAO {
                 .collection("myReservations")
                 .document(reservation.id)
                 .delete()
+                .addOnSuccessListener {
+                    Log.d("DeleteReservation", "Reservation deleted")
+                }
+                .addOnCanceledListener {
+                    Log.d("DeleteReservation", "Failed to delete reservation")
+                }
         }
     }
 }
