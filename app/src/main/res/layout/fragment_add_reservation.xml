@@ -40,8 +40,8 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_barname"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textColor="#5D5D5D"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/et_nombre"
@@ -69,8 +69,8 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_userid"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textColor="#5D5D5D"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/et_userid"
@@ -98,8 +98,8 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_desc"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textColor="#5D5D5D"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/et_description"
@@ -127,8 +127,8 @@
             android:fontFamily="@font/sen"
             android:text="@string/tv_date"
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textColor="#5D5D5D"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/et_date"
@@ -144,7 +144,6 @@
             android:textColor="@color/black"
             android:minHeight="48dp"
             tools:text="@string/msg_date" />
-
     </LinearLayout>
 
     <LinearLayout

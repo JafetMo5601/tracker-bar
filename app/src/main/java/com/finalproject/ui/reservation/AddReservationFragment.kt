@@ -11,10 +11,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.finalproject.R
 import com.finalproject.databinding.FragmentAddReservationBinding
-import com.finalproject.model.Bar
 import com.finalproject.model.Reservation
 import com.finalproject.viewmodels.BarViewModel
 import com.finalproject.viewmodels.ReservationViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 class AddReservationFragment : Fragment() {
 
@@ -44,8 +45,10 @@ class AddReservationFragment : Fragment() {
         if(name.isNotEmpty()){
             val userid = binding.etUserid.text.toString()
             val description = binding.etDescription.text.toString()
+            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+            val currentDate = sdf.format(Date())
             val date = binding.etDate.text.toString()
-            val reservation = Reservation("", name, userid, description, date)
+            val reservation = Reservation("", name, userid, description, currentDate)
             reservationModel.addReservation(reservation)
             Toast.makeText(requireContext(),getString(R.string.msg_reservation_added),Toast.LENGTH_SHORT).show()
         }else{

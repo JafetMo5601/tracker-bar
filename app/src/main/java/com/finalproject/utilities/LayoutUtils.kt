@@ -1,6 +1,6 @@
 package com.finalproject.utilities
 
-import com.finalproject.AddReservation
+import com.finalproject.AvailableBares
 import com.finalproject.ProfilePage
 import com.finalproject.ReservationPage
 import com.finalproject.SettingsMenu
@@ -24,7 +24,7 @@ class LayoutUtils {
             "Favorites" to null,
         )
         this.homeLayoutClasses = mapOf(
-            1 to AddReservation::class.java,
+            1 to AvailableBares::class.java,
             2 to ReservationPage::class.java,
             3 to SettingsMenu::class.java,
             0 to ProfilePage::class.java

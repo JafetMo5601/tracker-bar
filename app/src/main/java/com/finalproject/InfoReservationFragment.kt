@@ -2,22 +2,17 @@ package com.finalproject
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.finalproject.viewmodels.ReservationViewModel
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
 import com.finalproject.databinding.FragmentInfoReservationBinding
 import com.finalproject.model.Reservation
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.finalproject.viewmodels.ReservationViewModel
 
 class InfoReservationFragment : Fragment() {
 
@@ -52,7 +47,7 @@ class InfoReservationFragment : Fragment() {
             val userid = binding.etUserid.text.toString()
             val description = binding.etDescription.text.toString()
             val date = binding.etDate.text.toString()
-            val reservation = Reservation(args.reservation.id, name, userid, description, date)
+            val reservation = Reservation(args.reservation.id, userid, name, description, date)
             reservationViewModel.updateReservation(reservation)
             Toast.makeText(requireContext(),getString(R.string.msg_reservation_updated), Toast.LENGTH_SHORT).show()
         }else{
