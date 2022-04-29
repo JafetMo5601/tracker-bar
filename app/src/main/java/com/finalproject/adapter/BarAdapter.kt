@@ -1,15 +1,15 @@
 package com.finalproject.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.finalproject.databinding.BarListItemBinding
 import com.finalproject.model.Bar
-import com.finalproject.ui.bar.BarFragmentDirections
 
 class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
 
+    lateinit var context: Context
     private var listBares = emptyList<Bar>()
 
     inner class BarViewHolder(private val itemBinding: BarListItemBinding):
@@ -24,11 +24,17 @@ class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
             }
 
             itemBinding.reservationItemView.setOnClickListener {
-                val action = BarFragmentDirections.
-                actionBarFragmentToAddReservationFragment(bar)
-                itemView.findNavController().navigate(action)
+                openReservations()
             }
         }
+    }
+
+    fun openReservations() {
+    }
+
+    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
+        super.onAttachedToRecyclerView(recyclerView)
+        context = recyclerView.context
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BarViewHolder {
@@ -45,8 +51,10 @@ class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
         return listBares.size
     }
 
+
     fun setData(bares: List<Bar>) {
         this.listBares = bares
         notifyDataSetChanged()
     }
+
 }
