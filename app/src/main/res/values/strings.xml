@@ -49,13 +49,19 @@
     <string name="bar_direction"> Calle de la amargura, Saprissa</string>
     <string name="address">"Address: "</string>
     <string name="available_bares_title">Bar Availables</string>
-    <string name="table_selection">Table selection</string>
-    <string name="table_des">Select the number of tables that you desire to reserve</string>
-    <string name="table_select_tables">Select tables</string>
+    <string name="table_selection">Add Reservation</string>
+    <string name="table_des">Please, fill out the fields to add your reservation</string>
+    <string name="table_select_tables">Reservation info</string>
     <string name="table_some_text">Available tables:</string>
     <string name="table_total">Total tables</string>
     <string name="table_some_text2">Quantity of tables to reserve:</string>
     <string name="table_total_tables">2</string>
-    <string name="bt_request">Request</string>
+    <string name="bt_request">Reserve</string>
     <string name="msg_request">you can\'t reserve that number of tables</string>
+    <string name="msg_barname">Bar name</string>
+    <string name="msg_userid">User id</string>
+    <string name="msg_description">Description</string>
+    <string name="msg_date">Date</string>
+    <string name="msg_reservation_added">Reservation added succesfully</string>
+    <string name="msg_nofound_data">Some fields are no fill</string>
 </resources>

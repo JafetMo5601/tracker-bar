@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.finalproject.R
 import com.finalproject.adapter.ReservationAdapter
 import com.finalproject.animation.SwipeGesture
 import com.finalproject.databinding.FragmentReservationBinding
@@ -27,6 +29,10 @@ class ReservationFragment : Fragment() {
             ViewModelProvider(this)[ReservationViewModel::class.java]
         _binding = FragmentReservationBinding.inflate(inflater, container, false)
 
+        binding.fbAgregar.setOnClickListener {
+            findNavController().navigate(R.id.action_reservationFragment_to_addReservationFragment)
+        }
+
         val reservationAdapter = ReservationAdapter()
         val recycler = binding.recycler
 
@@ -41,6 +47,8 @@ class ReservationFragment : Fragment() {
 //        barViewModel.addReservation(Bar("", "OPEN MIND", "Contiguo a Monster Pizza, Calle de la Amargura", true, 50, 10))
 //        barViewModel.addReservation(Bar("", "Terra \"U\"", "Calle de la amargura, Saprissa, San Pedro", true, 50, 10))
 //        barViewModel.addReservation(Bar("", "Bar Einstein", "Saprissa, San Jose Province, Costa Rica", true, 50, 10))
+
+        reservationViewModel = ViewModelProvider(this)[ReservationViewModel::class.java]
 
         reservationViewModel.getAllData.observe(viewLifecycleOwner) {
             reservations -> reservationAdapter.setData(reservations)

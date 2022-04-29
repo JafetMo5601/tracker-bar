@@ -12,19 +12,8 @@ import com.finalproject.ui.reservation.AddReservationFragment
 import com.finalproject.viewmodels.ReservationViewModel
 
 class AddReservation : AppCompatActivity() {
-    private lateinit var reservationViewModel: ReservationViewModel
-    private var binding: AddReservation? = null
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_reservation)
-    }
-
-    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
-        reservationViewModel = ViewModelProvider(this).get(ReservationViewModel::class.java)
-
-        reservationViewModel.addReservation()
-        return super.onCreateView(name, context, attrs)
     }
 }

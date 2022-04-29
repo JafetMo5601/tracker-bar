@@ -8,31 +8,6 @@
     android:orientation="vertical"
     tools:context=".CovidGuideLines">
 
-    <TextView
-        android:id="@+id/tv_covid_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/sen"
-        android:text="@string/table_selection"
-        android:textColor="@color/black"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/tv_description"
-        android:layout_width="233dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/sen"
-        android:text="@string/table_des"
-        android:textColor="#FF9F1C"
-        android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,82 +19,81 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="50dp"
             android:fontFamily="@font/sen"
             android:text="@string/table_select_tables"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
+        <EditText
+            android:id="@+id/et_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/msg_barname"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            tools:text="@string/msg_barname" />
+
+        <EditText
+            android:id="@+id/et_userid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/msg_userid"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            tools:text="@string/msg_userid" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/msg_description"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            tools:text="@string/msg_description" />
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/msg_date"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            tools:text="@string/msg_date" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tv_some"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/sen"
-            android:text="@string/table_some_text"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/et_total_tables"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="50dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number"
-            android:text="@string/table_total"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tv_some_2"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/sen"
-            android:text="@string/table_some_text2"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/et_total_tables_to_choose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="50dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number"
-            android:text="@string/table_total_tables"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-    </LinearLayout>
+        android:orientation="horizontal"/>
 
     <Button
         android:id="@+id/bt_request"
