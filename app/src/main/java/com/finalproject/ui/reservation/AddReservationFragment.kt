@@ -1,18 +1,14 @@
 package com.finalproject.ui.reservation
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.finalproject.AddReservationFragmentArgs
 import com.finalproject.R
-import com.finalproject.Register
 import com.finalproject.databinding.FragmentAddReservationBinding
 import com.finalproject.model.Bar
 import com.finalproject.viewmodels.BarViewModel

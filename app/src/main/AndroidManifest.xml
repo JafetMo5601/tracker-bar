@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
+            android:name=".AddReservation"
+            android:exported="false" />
+        <activity
             android:name=".AvailableBares"
             android:exported="false" />
         <activity

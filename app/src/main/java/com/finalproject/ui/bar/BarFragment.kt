@@ -34,6 +34,8 @@ class BarFragment : Fragment() {
                 bares -> barAdapter.setData(bares)
         }
 
+
+
         return binding.root
     }
 

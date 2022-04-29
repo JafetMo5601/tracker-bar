@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/addReservationFragment"
-        android:name="com.finalproject.AddReservationFragment"
+        android:name="com.finalproject.ui.reservation.AddReservationFragment"
         android:label="fragment_add_reservation"
         tools:layout="@layout/fragment_add_reservation" >
         <action
