@@ -46,7 +46,16 @@
     <string name="current_reservation_title">Current Reservations</string>
     <string name="bar_open">Open</string>
     <string name="Address">Address: </string>
-    <string name="bar_direction">Calle de la amargura, Saprissa</string>
+    <string name="bar_direction"> Calle de la amargura, Saprissa</string>
     <string name="address">"Address: "</string>
     <string name="available_bares_title">Bar Availables</string>
+    <string name="table_selection">Table selection</string>
+    <string name="table_des">Select the number of tables that you desire to reserve</string>
+    <string name="table_select_tables">Select tables</string>
+    <string name="table_some_text">Available tables:</string>
+    <string name="table_total">Total tables</string>
+    <string name="table_some_text2">Quantity of tables to reserve:</string>
+    <string name="table_total_tables">2</string>
+    <string name="bt_request">Request</string>
+    <string name="msg_request">you can\'t reserve that number of tables</string>
 </resources>

@@ -2,9 +2,11 @@ package com.finalproject.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.finalproject.databinding.BarListItemBinding
 import com.finalproject.model.Bar
+import com.finalproject.ui.bar.BarFragmentDirections
 
 class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
 
@@ -19,6 +21,12 @@ class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
                 itemBinding.tvReservationDate.text = "Open"
             } else {
                 itemBinding.tvReservationDate.text = "Closed"
+            }
+
+            itemBinding.reservationItemView.setOnClickListener {
+                val action = BarFragmentDirections.
+                actionBarFragmentToAddReservationFragment(bar)
+                itemView.findNavController().navigate(action)
             }
         }
     }
